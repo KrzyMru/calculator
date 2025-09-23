@@ -1,9 +1,131 @@
 import './app.css';
+import { useState } from 'react';
+import CustomRadio from './components/custom-radio/custom-radio';
 
 function App() {
+  const [text, setText] = useState<string>("");
+
   return (
-    <div></div>
+    <main>
+      <header>
+        calc
+        <CustomRadio />
+      </header>
+      <div>
+        {text}
+      </div>
+      <div>
+        <button
+          role='button'
+          title='7'
+        >
+          7
+        </button>
+        <button
+          role='button'
+          title='8'
+        >
+          8
+        </button>
+        <button
+          role='button'
+          title='9'
+        >
+          9
+        </button>
+        <button
+          role='button'
+          title='delete'
+        >
+          DEL
+        </button>
+        <button
+          role='button'
+          title='4'
+        >
+          4
+        </button>
+        <button
+          role='button'
+          title='5'
+        >
+          5
+        </button>
+        <button
+          role='button'
+          title='6'
+        >
+          6
+        </button>
+        <button
+          role='button'
+          title='+'
+        >
+          +
+        </button>
+        <button
+          role='button'
+          title='1'
+        >
+          1
+        </button>
+        <button
+          role='button'
+          title='2'
+        >
+          2
+        </button>
+        <button
+          role='button'
+          title='3'
+        >
+          3
+        </button>
+        <button
+          role='button'
+          title='-'
+        >
+          -
+        </button>
+        <button
+          role='button'
+          title='.'
+        >
+          .
+        </button>
+        <button
+          role='button'
+          title='0'
+        >
+          0
+        </button>
+        <button
+          role='button'
+          title='/'
+        >
+          /
+        </button>
+        <button
+          role='button'
+          title='x'
+        >
+          x
+        </button>
+        <button
+          role='button'
+          title='reset'
+        >
+          RESET
+        </button>
+        <button
+          role='button'
+          title='='
+        >
+          =
+        </button>
+      </div>
+    </main>
   )
 }
 
-export default App
+export default App;
