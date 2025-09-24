@@ -3,11 +3,20 @@ import { useEffect, useRef, useState } from 'react';
 import CustomRadio from './components/custom-radio/custom-radio';
 import calculateEquation from './utils/calculate-equation/calculate-equation';
 import getLastNumber from './utils/get-last-number/get-last-number';
+import { ThemeProvider } from './contexts/theme-context/theme-context';
 
 const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 const operators = ['/', 'x', '+', '-'];
 
 const App = () => {
+  return (
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
+  );
+}
+
+const AppContent = () => {
   const [text, setText] = useState<string>("");
   const [canPressNumber, setCanPressNumber] = useState<boolean>(true);
   const [canPressZero, setCanPressZero] = useState<boolean>(false);
